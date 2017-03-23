@@ -1,0 +1,8 @@
+Create a Twitter Bot that tracks mentions of key hashtags associated with "Yayoi Kusama: Infinity Mirrors" 
+exhibition at the Hirshhorn Museum. The exhibition has gotten a lot of media coverage and one of its largest selling points
+ is that it is very friendly for social media photos. We could track two of the main hashtags: #YayoiKusama and #InfiniteKusama. 
+ This could lead to a story that uses data from a certain time period to show the engagement with the exhibition.
+ 
+ Our main data source will be twitter and users tweeting information / utilizing the primary hashtags for the exhibition as well as 
+ other key terms we determine to be useful. The two main hashtags are #YayoiKusama and #InfiniteKusama but it may be necessary to track additional
+ terms as well.
