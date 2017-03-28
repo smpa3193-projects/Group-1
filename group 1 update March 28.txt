@@ -1,0 +1,23 @@
+March 28 update from Group 1 on Twitterbot Project
+
+1. How will you store the data?
+
+		Excel files
+
+2. Have you thought about how often you'll check for tweets?
+
+		Twice a week (this might change depending on data we are getting)
+
+3. Are there other things you can do with this data, based on what's available via the Twitter API?
+
+		Look at frequency of hashtag, how usage increases or decreases (or does neither)
+		Look at which pieces are mentioned the most
+
+Other thoughts:
+
+Goals/Ideas for what we can track/ consider:
+See which (infinity)rooms of exhibition are featured the most in tweets
+Track mentions of “tickets” or “passes” in order to think about availability / crowding issues
+Track mentions of "Hirshhorn" or @hirshhorn
+
+Question for Derek: Is there a way to track photos with tweets w/Twitterbot?
