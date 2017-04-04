@@ -1,0 +1,11 @@
+Group 1 Questions: April 2, 2017
+How do we get Twitterbot to say how many people have used a certain hashtag each day or hour?
+
+(For example, “#InfiniteKusama was tweeted X times today”)
+
+How do we get it to do something other than retweet? (Such as sum up data?)
+
+
+Is it possible to track different rooms within the exhibition? Such as see who is mentioning the tiles of which room and how frequently? Could we do this through tracking several mentions?
+
+How would we automate these items in a script?
