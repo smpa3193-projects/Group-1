@@ -1,0 +1,8 @@
+4/18 Update
+
+We created a twitter account @infinitybot from which we can run our commands. 
+Able to set it up on python and run our first pull of #infinitekusama for 4/17. 
+What we want to work on: using "counter" to try and find mentions of specific rooms, finding date of tweets if possible?/deciding how important date of tweets is and if it's worth pulling, 
+figuring out what (if anything) we want our bot to produce on Twitter itself (tweeting # of mentions, tweeting most popular room, etc.)
+Question: Is there any way we can pull the date of the tweet in the same csv file we pull the tweet text into? 
+Question: One trouble we ran into was we changed the counter in tweetbot2.py from 100 to 500, but the csv file is still only showing 100. Is there another line in the script that needs changing? Not sure why it is glitching. 
