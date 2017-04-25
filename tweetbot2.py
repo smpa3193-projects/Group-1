@@ -1,5 +1,6 @@
 from twython import Twython
 import csv
+from collections import Counter
 
 CONSUMER_KEY = 'R2pWRXsbIvXqkHxljWC7muqf4'
 CONSUMER_SECRET = 'RIPuyuK8wdd81M23xDqxSWUiwcBaQO5q4TbkfiqIEAIq8T4x1C'
@@ -8,22 +9,31 @@ ACCESS_TOKEN_SECRET = 'F93y3Nn9wgaPG91iX1Gm3nPsy5jrZCa00dVIYkYabLK8I'
 
 twitter = Twython(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
-search = twitter.search(q='#InfiniteKusama', count="100")
-search = twitter.search(q='#YayoiKusama', count="100")
-search = twitter.search(q='Aftermath of Obliteration of Eternity', count="100")
-search = twitter.search(q='Obliteration Room', count = "200")
+all_words = []
+tweets = twitter.search(q='#InfiniteKusama', count="500")
+text = []
 
-tweets = search['statuses']
-
-with open ('test2.csv', 'w') as fp:
+with open ('hashtag_tweets.csv', 'w') as fp:
     a = csv.writer(fp)
     # add a header row
-    a.writerow(('#InfiniteKusama', 'Tweet Text', 'URL'))
+    a.writerow(('Hashtag', 'Tweet Text', 'URL'))
 
-    for result in tweets:
+    for result in tweets['statuses']:
         try:
             url = result['entities']['urls'][0]['expanded_url']
         except:
             url = None
-        text=[['#InfiniteKusama', result['text'].encode('utf-8'), url]]
+        text.append(['#InfiniteKusama', result['text'].encode('utf-8'), url])
         a.writerows((text))
+
+# build list of words
+for tweet in tweets['statuses']:
+  tweet_words = tweet['text'].split()
+  all_words.append(tweet_words)
+  
+# this is called a list comprehension. it's weird but awesome - it performs the same action to each item in a list.
+all_words_flattened = [word.upper() for tweet_words in all_words for word in tweet_words]
+counts = Counter(all_words_flattened)
+
+for word, count in counts.most_common(200):
+  print "%s: %d" % (word, count)
