@@ -1,0 +1,39 @@
+WHY WE SELECTED THIS PROJECT:
+
+- Popularity of exhibition
+- Wanted to gage traffic/engagement in a new way
+- Wanted to track hashtags in a new way
+- Wanted to get an idea of frequency/mentions
+
+WHAT WE WANTED TO ACHIEVE:
+
+- Pull hashtags from Twitter (#YayoiKusama and #InfiniteKusama)
+- Store mentions of hashtags in csv file
+- Track mentions of exhibition/ exhibition hashtags
+- See which rooms were mentioned / which rooms were mentioned the most
+- Get a sense of ticket / ticket demand
+- Track dates 
+- Find frequency of words within tweets
+- get images from tweets
+
+WHAT WE ACHIEVED:
+
+- Pulled hashtags from Twitter 
+- Stored mentions of hashtags/other tweet data in csv file 
+- Track dates 
+- Find frequency of words within tweets
+
+CHALLENGES: 
+
+- geocoding
+- format of date / time
+- Have frequencies go directly to Twitter
+	- streamlining the process
+- tracking tickets
+
+IF WE HAD MORE TIME?
+
+- Pull images from tweets
+- compare more hashtag data
+- compare hashtag data
+- set up automatic working of twitterbot
