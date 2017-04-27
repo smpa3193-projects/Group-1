@@ -3,9 +3,6 @@ import csv
 
 from collections import Counter
 
-import time
-ts = time.strftime('%Y-%m-%d %H:%M:%S', time.strptime(tweet['created_at'],'%a %b %d 
-
 CONSUMER_KEY = 'R2pWRXsbIvXqkHxljWC7muqf4'
 CONSUMER_SECRET = 'RIPuyuK8wdd81M23xDqxSWUiwcBaQO5q4TbkfiqIEAIq8T4x1C'
 ACCESS_TOKEN = '2806069908-UMVC9dsiI4gMqSBdDSKU1YiJ1fG8gOV0YY0dqCx'
@@ -14,19 +11,8 @@ ACCESS_TOKEN_SECRET = 'F93y3Nn9wgaPG91iX1Gm3nPsy5jrZCa00dVIYkYabLK8I'
 twitter = Twython(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
 all_words = []
-
-{
-    "coordinates":
-    [
-        -77.0231,
-        38.8879
-    ],
-    "type":"Point"
-}
-
-infinite_tweets = twitter.search(q='#InfiniteKusama', count=1000)
-yayoi_tweets = twitter.search(q='#YayoiKusama', count=1000)
-
+infinite_tweets = twitter.search(q='#InfiniteKusama', count=1000, geocode= '38.9072, -77.0369, 10mi')
+yayoi_tweets = twitter.search(q='#YayoiKusama', count=1000, geocode= '38.9072, -77.0369, 10mi')
 # setup containers for csvs
 inf_tweets = []
 yay_tweets = []
@@ -60,7 +46,7 @@ with open ('yayoikusama.csv', 'w') as fp:
     # add a header row
     a.writerow(['Hashtag', 'id', 'screen_name', 'Tweet Text', 'URL'])
 
-    for result in yayoi_tweets['statuses']:
+for result in yayoi_tweets['statuses']:
         try:
             url = result['entities']['urls'][0]['expanded_url']
         except:
